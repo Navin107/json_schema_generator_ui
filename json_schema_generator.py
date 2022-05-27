@@ -8,7 +8,16 @@ import requests
 from tkinter import messagebox
 
 get_path = os.path.abspath("json_schema_generator_ui")
-final_path = os.path.join(get_path,"icons")
+
+dirname = os.path.dirname(get_path)
+
+if os.path.basename(dirname) == "dist":
+    final_path = os.path.join(os.path.dirname(dirname),"icons")
+elif os.path.basename(dirname) == "json_schema_generator_ui":
+    final_path = os.path.join(dirname,"icons")
+else:
+    final_path = os.path.join(get_path,"icons")
+
 
 class json_schema_generator_ui:
 
