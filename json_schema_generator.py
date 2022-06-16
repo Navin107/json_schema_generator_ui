@@ -11,7 +11,7 @@ get_path = os.getcwd()
 dirname = os.path.dirname(get_path)
 final_path = os.path.join(get_path, "icons")
 
-if os.path.basename(dirname) == "dist":
+if os.path.basename(get_path) == "dist":
     final_path = os.path.join(os.path.dirname(get_path),"icons")
 
 class json_schema_generator_ui:
